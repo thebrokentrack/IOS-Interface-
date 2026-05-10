@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iOS Interface</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background: url('https://images.unsplash.com/photo-1557683316-973673baf926') no-repeat center center fixed;
+            background-size: cover;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+        }
+        .app-icon {
+            width: 65px;
+            height: 65px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            transition: transform 0.2s;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .app-icon:active {
+            transform: scale(0.9);
+        }
+        .app-label {
+            font-size: 11px;
+            color: white;
+            margin-top: 5px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+        .dock {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 400px;
+            height: 90px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="flex justify-between items-center px-8 pt-4 text-white font-semibold text-sm">
+        <div>18:00</div>
+        <div class="flex space-x-2">
+            <i class="fas fa-signal"></i>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-battery-full"></i>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-4 gap-y-8 gap-x-4 p-8 mt-5">
+        
+        <div class="flex flex-col items-center" onclick="window.location.href='https://wa.me'">
+            <div class="app-icon bg-green-500 text-white"><i class="fab fa-whatsapp"></i></div>
+            <span class="app-label">WhatsApp</span>
+        </div>
+
+        <div class="flex flex-col items-center" onclick="window.location.href='https://www.messenger.com'">
+            <div class="app-icon bg-blue-400 text-white"><i class="fab fa-facebook-messenger"></i></div>
+            <span class="app-label">Messenger</span>
+        </div>
+
+        <div class="flex flex-col items-center" onclick="window.location.href='https://facebook.com'">
+            <div class="app-icon bg-blue-600 text-white"><i class="fab fa-facebook-f"></i></div>
+            <span class="app-label">Facebook</span>
+        </div>
+
+        <div class="flex flex-col items-center" onclick="window.location.href='https://twitter.com'">
+            <div class="app-icon bg-black text-white"><i class="fab fa-x-twitter"></i></div>
+            <span class="app-label">Twitter</span>
+        </div>
+
+        <div class="flex flex-col items-center" onclick="window.location.href='https://t.me'">
+            <div class="app-icon bg-sky-500 text-white"><i class="fab fa-telegram-plane"></i></div>
+            <span class="app-label">Telegram</span>
+        </div>
+
+        <div class="flex flex-col items-center" onclick="window.location.href='https://chat.deepseek.com'">
+            <div class="app-icon bg-blue-900 text-white"><i class="fas fa-brain"></i></div>
+            <span class="app-label">DeepSeek</span>
+        </div>
+
+        <div class="flex flex-col items-center" onclick="window.location.href='https://gemini.google.com'">
+            <div class="app-icon bg-gradient-to-br from-blue-400 to-purple-500 text-white"><i class="fas fa-sparkles"></i></div>
+            <span class="app-label">Gemini</span>
+        </div>
+
+        <div class="flex flex-col items-center" onclick="window.location.href='https://chatgpt.com'">
+            <div class="app-icon bg-emerald-600 text-white"><i class="fas fa-robot"></i></div>
+            <span class="app-label">ChatGPT</span>
+        </div>
+
+        <div class="flex flex-col items-center" onclick="window.location.href='https://google.com'">
+            <div class="app-icon bg-white text-gray-700"><i class="fab fa-google"></i></div>
+            <span class="app-label">Google</span>
+        </div>
+
+        <div class="flex flex-col items-center" onclick="window.location.href='https://youtube.com'">
+            <div class="app-icon bg-red-600 text-white"><i class="fab fa-youtube"></i></div>
+            <span class="app-label">YouTube</span>
+        </div>
+
+        <div class="flex flex-col items-center" onclick="window.location.href='https://instagram.com'">
+            <div class="app-icon bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 text-white"><i class="fab fa-instagram"></i></div>
+            <span class="app-label">Instagram</span>
+        </div>
+
+        <div class="flex flex-col items-center" onclick="window.location.href='https://music.apple.com'">
+            <div class="app-icon bg-pink-500 text-white"><i class="fab fa-apple"></i></div>
+            <span class="app-label">Music</span>
+        </div>
+
+        <div class="flex flex-col items-center" onclick="window.location.href='https://duckduckgo.com'">
+            <div class="app-icon bg-orange-500 text-white"><i class="fas fa-search"></i></div>
+            <span class="app-label">DuckDuckGo</span>
+        </div>
+
+    </div>
+
+    <div class="dock glass">
+        <div class="app-icon bg-white text-blue-500" onclick="alert('Phone Opening...')"><i class="fas fa-phone"></i></div>
+        <div class="app-icon bg-blue-500 text-white" onclick="window.location.href='https://duckduckgo.com'"><i class="fas fa-compass"></i></div>
+        <div class="app-icon bg-green-500 text-white" onclick="window.location.href='https://wa.me'"><i class="fab fa-whatsapp"></i></div>
+        <div class="app-icon bg-white text-red-500" onclick="window.location.href='https://music.apple.com'"><i class="fas fa-music"></i></div>
+    </div>
+
+</body>
+</html>
